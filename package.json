@@ -1,0 +1,15 @@
+{
+  "name": "setupbackend",
+  "version": "1.0.0",
+  "description": "code pankajol",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "code",
+    "javascript"
+  ],
+  "author": "pankaj yadav",
+  "license": "ISC"
+}
