@@ -11,5 +11,8 @@
     "javascript"
   ],
   "author": "pankaj yadav",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
 }
