@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken"
 import {User} from "../models/user.model.js"
 
 
-export const verifyJWT = asyncHandler( async (req,_,next) => {
+export const verifyJWT = asyncHandler( async (req, _, next) => {
  try {
     const token = req.cookies?.accessToken || req.header("Authorization")?.replace("Bearer","")
    
@@ -12,8 +12,8 @@ export const verifyJWT = asyncHandler( async (req,_,next) => {
        throw new ApiError(401,"Unauthorizes request")
     }
    
-   const decodeedToken = jwt.verify(token,process.env.ACCESS_TOKEN_SECRET)
-   const user = await User.findById(decodeedToken?._id).select("-password -refreshToken")
+   const decodedToken = jwt.verify(token,process.env.ACCESS_TOKEN_SECRET)
+   const user = await User.findById(decodedToken?._id).select("-password -refreshToken")
    
    if(!user){
        // TOdo discuss about
